@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: rgb(88, 67, 190);
+    --orange: rgb(255, 160, 103);
+    --light-orange: rgb(255, 237, 230);
+    --light-purple: rgb(246, 244, 255);
+    --tea-pink: rgb(254, 112, 102);
+    --logo-color: rgb(250, 96, 31);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    background-color: rgb(255, 255, 255);
+    /* width: 100%;
+    height: 100%; */
+}
+
+.sub-main {
+    background-color: rgb(222, 226, 234);
+    position: absolute;
+    top: 5rem;
+    left: 9rem;
+    /* bottom: 5rem; */
+    right: 9rem;
+    width: 85%;
+    height: 110vh;
+    border-radius: 10px;
+}
+
+.grid-container {
+    background: rgb(255, 255, 255);
+    padding: 1em;
+    position: relative;
+    top: 2.5rem;
+    left: 4rem;
+    right: 1.5rem;
+    width: 90%;
+    height: 92%;
+    /* bottom: 100rem; */
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 0.5fr 5fr 1.7fr;
+    grid-template-areas: 
+    "l m r";
+}
+
+#nav {
+    display: grid;
+    grid-area: l;
+    grid-template-rows: repeat(8, 1fr);
+    place-items: center;
+
+}
+
+
+
+.left-side {
+    
+    background: rgb(241, 243, 246);
+    border-radius: 10px 0 0 10px;
+    height: 101.2vh;
+    position: relative;
+    top: -16px;
+    left: -16px;
+    bottom: -100px;
+    
+}
+
+.logo {
+    grid-row: 1/3;
+}
+
+/* logo styling */
+.logo p {
+    color: var(--logo-color);
+    font-size: 2em;
+    font-weight: bold;
+    width: 60px;
+    height: 70px;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.2),
+    -5px -5px 8px rgba(255,255,255,0.6),
+    inset 3px 3px 4px rgba(255,255,255,0.8),
+    inset -3px -3px 4px rgba(0,0,0,0.2);
+    /* to place the logo in center of shadow-box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    opacity: 0.4;
+    padding: 10px;
+    height: 45px;
+    width: 45px;
+}
+
+.btn.active {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 4px  rgba(255,255,255,0.8),
+    inset 3px 3px 10px rgba(0,0,0,0.4);
+}
+
+/* main section styling */
+#main {
+     padding: 0px 10px;
+     grid-area: m;
+     display: grid;
+     grid-template-rows: auto 1fr auto 1fr;
+    
+}
+
+#main h2 {
+    color: #222222;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    place-self: end start;
+    margin-bottom: 10px;
+}
+
+
+
+.subTitle {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: b9c2d1;
+    opacity: 0.5;
+
+}
+
+.largeTitle {
+    font-size: 2em;
+    font-weight: 500;
+
+}
+
+div.top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    column-gap: 25px;
+    align-content: flex-start;
+}
+
+.exam {
+    background-color: var(--blue);
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    /* line-height: 35px; */
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    height: 9rem;
+}  
+
+
+.test {
+    /* position: relative;
+    left: 120px;
+    top: -1.2rem;
+    font-size: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.test a {
+    color: #ffffff;
+}
+
+/* homework div styling */
+.Homework{
+    border-radius: 10px;
+    /* border: 1px solid grey; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 9rem;
+    background-color: var(--light-orange);
+    color: var(--orange);
+    
+}
+
+.Homework img {
+    position: relative;
+    top: -0.5rem;
+    width: 20px;
+    color: var(--orange);
+}
+
+.Reading{
+    border-radius: 10px;
+    /* border: 1px solid grey; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 9rem;
+    background-color: var(--light-purple);
+    color: plum;
+    
+    
+}
+
+.Reading img {
+    position: relative;
+    top: -0.5rem;
+    /* font-size: 1.3em; */
+    width: 20px;
+    color: plum;
+}
+
+.todo-title {
+    font-weight: 500;
+
+}
+
+.subTodo {
+    font-weight: 300;
+
+}
+
+
+/* main middle section styling */
+
+/* group div */
+div.middle {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   
+}
+
+.title {
+    font-weight: 500;
+    color: black;
+
+} 
+
+div.middle .Group-Info {
+    box-shadow: 4px 6px 20px lightgray;
+    position: absolute;
+    top: 16.5rem;
+    left: 6.7rem;
+    width: 20rem;
+    height: 16rem;
+    border-radius: 10px;
+    padding: 30px;
+    /* height: 294.5px; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+
+}
+
+.Group-Info img {
+    width: 18px;
+    height: 18px;
+}
+
+.group-header {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5em;
+    
+}
+
+.group-header p, .footer p {
+    font-weight: bold;
+}
+
+.group-homework {
+    background-color: var(--orange);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 0.5em;
+    height: 100px;
+    /* line-height: 1.5em; */
+}
+
+.group-homework p, .group-homework span {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 1.6em; 
+}
+
+
+/* spainsh div styling */
+.Spanish {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 19rem;
+    left: 30rem;
+}
+
+.flagTitle img {
+    width: 40px;
+    /* height: 30px; */
+    padding: 7px;
+    box-shadow: 4px 6px 20px lightgray;
+    /* background-color: #ffffff; */
+    border-radius: 10px;
+
+}
+
+.flagTitle p {
+    font-size: 25px;
+}
+
+.Progressbar p {
+    position: relative;
+    top: 0.7rem;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+
+/* styling progressbar */
+progress {
+    border: none;
+    height: 7px;
+}
+
+/* coloring from inside of progressbar */
+progress::-webkit-progress-value {
+    background-color: var(--orange);
+    border-radius: 10px;
+}
+
+/* coloring the remaining of progressbar */
+progress::-webkit-progress-bar {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+
+
+/* bottom section styling */
+div.bottom {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    column-gap: 30px;
+    position: absolute;
+    top: 34rem;
+    left: 20rem;
+}
+
+.bott img{
+    width: 30px;
+
+
+}
+
+.bott {
+    height: 100px;
+    width: 320px;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.bottom .arrow {
+    width: 16px;
+    height: 16px;
+}
+
+.Grammer {
+    position: relative;
+    left: -13rem;
+}
+
+.Dictionary {
+    position: relative;
+    left: -13rem;
+}
+
+
+.bott > div {
+    display: flex;
+    flex-basis: 60%;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.bott .icon {
+    box-shadow: 4px 8px 12px lightgrey;
+    padding: 5px;
+    border-radius: 20%;
+    font-size: 1em;
+   
+}
+
+/* profile section styling */
+
+#profile {
+    padding: 0px 100px;
+    display: grid;
+    grid-template-rows: 30% 15% 55%;
+}
+
+.right-side {
+    grid-area: r;
+    background: rgb(249, 250, 251);
+    border-radius: 0px 10px 10px 0px;
+    position: relative;
+    top: -16px;
+    /* left: -16px; */
+    right: -16px;
+}
+
+/* profile top */
+.pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.largeTitle.name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* .pic .largeTitle, .pic .subTitle {
+    margin: 0px 5px;
+} */
+
+.adBox {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    /* width: 10em; */
+    width: 171px;
+    /* height: 90px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    top: 0.7rem;
+}
+
+.adBox .title {
+    font-size: 12px;
+
+}
+
+.adBox .title span {
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.adBox img {
+    position: relative;
+    left: 0.7em;
+    border-radius: 20px;
+    padding: 5px 5px;
+    box-shadow: 1px 1px 2px lightgray;
+}
+
+.courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.courses .largeTitle {
+    font-size: 19px;
+    font-weight: 700;
+    position: absolute;
+    top: 19rem;
+    left: 6rem;
+}
+
+.coursesbox {
+    height: 80px;
+    width: 171px;
+    /* padding: 15px; */
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.coursesbox .title {
+    font-size: 0.8em;
+    font-weight: bold;
+    position: relative;
+    left: 0.3em;
+}
+
+.coursesbox .subTitle {
+    font-size: 0.8em;
+    /* font-weight: 500; */
+    /* position: relative;
+    left: 0.2em; */
+}
+
+.coursesbox img {
+    padding: 5px 5px;
+    border-radius: 8px;
+}
+
+
+
+.coursesbox.grammer {
+    position: absolute;
+    top: 22rem;
+    left: 6rem;
+}
+
+.coursesbox.grammer img {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    background-color: var(--blue);
+}
+
+.grammer .percent {
+    color: var(--blue);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+
+.coursesbox.Dictionary {
+    position: absolute;
+    top: 28.5rem;
+    left: 6rem;
+
+}
+
+.Dictionary .title {
+    position: relative;
+    left: 1rem;
+}
+
+.Dictionary .title span {
+    position: relative;
+    left: -1.2em;
+}
+
+.coursesbox.Dictionary img {
+    width: 25px;
+    height: 25px;
+    background-color: var(--orange);
+}
+
+.Dictionary .percent {
+    color: var(--orange);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.coursesbox.reading {
+    position: absolute;
+    top: 35rem;
+    left: 6rem;
+
+}
+
+.coursesbox.reading img {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(254, 112, 102);
+}
+
+.reading .percent {
+    color: rgb(254, 112, 102);
+    font-size: 1em;
+    font-weight: 500;
+}
